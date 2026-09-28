@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navy & Gold — Palette Preview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg:#f6f4ee; --panel:#ffffff; --panel2:#fbfaf6;
+    --border:#dcd6c8; --border2:#c9c0aa;
+    --navy:#0a2540; --navy2:#123055; --gold:#b8862f; --gold-bg:#f6ecd8;
+    --ink:#1c2430; --sub:#5b6472; --dim:#8a8f97;
+    --serif:'Source Serif 4',serif; --sans:'Inter',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--sans);}
+
+  .topbar{background:var(--navy);padding:22px 32px;color:#fff;}
+  .topbar-title{font-family:var(--serif);font-size:22px;font-weight:700;letter-spacing:.01em;}
+  .topbar-sub{font-size:12px;color:#b9c4d3;margin-top:4px;letter-spacing:.04em;}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:32px;}
+  .sec-lbl{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--navy);margin:28px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block;}
+  .sec-wrap{margin-bottom:8px;}
+
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:8px;}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:16px;text-decoration:none;color:inherit;display:block;position:relative;transition:border-color .15s,box-shadow .15s,transform .15s;}
+  .card:hover{border-color:var(--gold);box-shadow:0 4px 14px rgba(10,37,64,.10);transform:translateY(-1px);}
+  .c-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;}
+  .c-num{font-size:10px;color:var(--gold);letter-spacing:.1em;font-weight:700;text-transform:uppercase;}
+  .c-title{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.15;}
+  .c-desc{font-size:12.5px;line-height:1.5;color:var(--ink);margin-bottom:8px;}
+  .c-url{font-size:11px;color:var(--sub);margin-bottom:12px;word-break:break-all;}
+  .c-btn{width:100%;background:var(--navy);color:#fff;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.06em;padding:9px 10px;border-radius:3px;display:flex;justify-content:space-between;transition:background .15s;}
+  .card:hover .c-btn{background:var(--gold);color:var(--navy);}
+  .sub-tag{flex-shrink:0;font-size:9px;font-weight:700;letter-spacing:.06em;color:var(--gold);background:var(--gold-bg);border:1px solid var(--gold);padding:3px 7px;border-radius:2px;text-transform:uppercase;white-space:nowrap;}
+  .note{font-size:12px;color:var(--sub);line-height:1.7;margin-top:8px;padding-top:16px;border-top:1px solid var(--border);}
+
+  @media (max-width:1000px){
+    .cards{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width:720px){
+    .wrap{padding:20px 16px;}
+    .cards{grid-template-columns:repeat(2,1fr);gap:12px;}
+    .topbar{padding:18px 20px;}
+    .topbar-title{font-size:19px;}
+  }
+  @media (max-width:440px){
+    .cards{grid-template-columns:1fr;}
+    .c-title{font-size:20px;}
+    .c-desc{font-size:13.5px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-title">Latest Financial News</div>
+  <div class="topbar-sub">THE LATEST HEADLINES FROM TOP FINANCIAL NEWS OUTLETS, IN ONE PLACE</div>
+</div>
+
+<div class="wrap">
+
+  <div class="sec-wrap"><div class="sec-lbl">News outlets — click to open in a new tab</div></div>
+  <div class="cards">
+    <a class="card" href="https://www.bloomberg.com" target="_blank" rel="noopener noreferrer">
+      <div class="c-head"><div class="c-num">News · 01</div><span class="sub-tag">Subscription</span></div>
+      <div class="c-title">Bloomberg</div>
+      <div class="c-desc">Markets, central banks and deals. Fast, deep coverage.</div>
+      <div class="c-url">bloomberg.com</div>
+      <div class="c-btn">OPEN BLOOMBERG <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.reuters.com" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">News · 02</div>
+      <div class="c-title">Reuters</div>
+      <div class="c-desc">Fast, neutral wire reporting on earnings, data and policy.</div>
+      <div class="c-url">reuters.com</div>
+      <div class="c-btn">OPEN REUTERS <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.wsj.com" target="_blank" rel="noopener noreferrer">
+      <div class="c-head"><div class="c-num">News · 03</div><span class="sub-tag">Subscription</span></div>
+      <div class="c-title">The Wall Street Journal</div>
+      <div class="c-desc">U.S. corporate, Fed and Washington coverage with strong scoops.</div>
+      <div class="c-url">wsj.com</div>
+      <div class="c-btn">OPEN WSJ <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.ft.com" target="_blank" rel="noopener noreferrer">
+      <div class="c-head"><div class="c-num">News · 04</div><span class="sub-tag">Subscription</span></div>
+      <div class="c-title">Financial Times</div>
+      <div class="c-desc">Global markets and macro, with strong Europe and Asia coverage.</div>
+      <div class="c-url">ft.com</div>
+      <div class="c-btn">OPEN FT <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.cnbc.com" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">News · 05</div>
+      <div class="c-title">CNBC</div>
+      <div class="c-desc">Live U.S. market-hours coverage and executive interviews.</div>
+      <div class="c-url">cnbc.com</div>
+      <div class="c-btn">OPEN CNBC <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.marketwatch.com" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">News · 06</div>
+      <div class="c-title">MarketWatch</div>
+      <div class="c-desc">Fast headlines and easy-to-scan market snapshots.</div>
+      <div class="c-url">marketwatch.com</div>
+      <div class="c-btn">OPEN MARKETWATCH <span>↗</span></div>
+    </a>
+    <a class="card" href="https://finance.yahoo.com" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">News · 07</div>
+      <div class="c-title">Yahoo Finance</div>
+      <div class="c-desc">Live quotes, live blogs, earnings calendar and streaming coverage.</div>
+      <div class="c-url">finance.yahoo.com</div>
+      <div class="c-btn">OPEN YAHOO FINANCE <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.barrons.com" target="_blank" rel="noopener noreferrer">
+      <div class="c-head"><div class="c-num">News · 08</div><span class="sub-tag">Subscription</span></div>
+      <div class="c-title">Barron's</div>
+      <div class="c-desc">Investment-focused analysis and stock picks.</div>
+      <div class="c-url">barrons.com</div>
+      <div class="c-btn">OPEN BARRON'S <span>↗</span></div>
+    </a>
+    <a class="card" href="https://seekingalpha.com/news" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">News · 09</div>
+      <div class="c-title">Seeking Alpha</div>
+      <div class="c-desc">Breaking stock news feed, earnings summaries and transcripts.</div>
+      <div class="c-url">seekingalpha.com/news</div>
+      <div class="c-btn">OPEN SEEKING ALPHA <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.benzinga.com" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">News · 10</div>
+      <div class="c-title">Benzinga</div>
+      <div class="c-desc">Real-time headlines, movers and analyst calls.</div>
+      <div class="c-url">benzinga.com</div>
+      <div class="c-btn">OPEN BENZINGA <span>↗</span></div>
+    </a>
+  </div>
+
+  <div class="sec-wrap"><div class="sec-lbl">Official sources — latest announcements</div></div>
+  <div class="cards">
+    <a class="card" href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">Official · 11</div>
+      <div class="c-title">SEC EDGAR</div>
+      <div class="c-desc">Newest company filings as they land (8-Ks, 10-Qs and more).</div>
+      <div class="c-url">sec.gov/cgi-bin/browse-edgar?action=getcurrent</div>
+      <div class="c-btn">OPEN LATEST FILINGS <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.federalreserve.gov/newsevents/pressreleases.htm" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">Official · 12</div>
+      <div class="c-title">Federal Reserve</div>
+      <div class="c-desc">Press releases: rate decisions, statements and policy announcements.</div>
+      <div class="c-url">federalreserve.gov/newsevents/pressreleases.htm</div>
+      <div class="c-btn">OPEN PRESS RELEASES <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.bls.gov/bls/newsrels.htm" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">Official · 13</div>
+      <div class="c-title">BLS</div>
+      <div class="c-desc">Latest economic releases: jobs, CPI, PPI and more.</div>
+      <div class="c-url">bls.gov/bls/newsrels.htm</div>
+      <div class="c-btn">OPEN LATEST RELEASES <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.bea.gov/news/current-releases" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">Official · 14</div>
+      <div class="c-title">BEA</div>
+      <div class="c-desc">Current releases: GDP, personal income and outlays, trade.</div>
+      <div class="c-url">bea.gov/news/current-releases</div>
+      <div class="c-btn">OPEN CURRENT RELEASES <span>↗</span></div>
+    </a>
+  </div>
+
+  <div class="sec-wrap"><div class="sec-lbl">Wire services — company press releases</div></div>
+  <div class="cards">
+    <a class="card" href="https://www.businesswire.com/newsroom" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">Wire · 15</div>
+      <div class="c-title">Business Wire</div>
+      <div class="c-desc">Newsroom sorted by latest company announcements.</div>
+      <div class="c-url">businesswire.com/newsroom</div>
+      <div class="c-btn">OPEN NEWSROOM <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.prnewswire.com/news-releases/" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">Wire · 16</div>
+      <div class="c-title">PR Newswire</div>
+      <div class="c-desc">Latest news releases from public and private companies.</div>
+      <div class="c-url">prnewswire.com/news-releases</div>
+      <div class="c-btn">OPEN NEWS RELEASES <span>↗</span></div>
+    </a>
+    <a class="card" href="https://www.globenewswire.com/newsroom" target="_blank" rel="noopener noreferrer">
+      <div class="c-num">Wire · 17</div>
+      <div class="c-title">GlobeNewswire</div>
+      <div class="c-desc">Latest press releases and regulatory disclosures.</div>
+      <div class="c-url">globenewswire.com/newsroom</div>
+      <div class="c-btn">OPEN GLOBENEWSWIRE <span>↗</span></div>
+    </a>
+  </div>
+
+  <div class="note">Every card opens in a new browser tab. "Subscription" tags mark outlets that typically need a paid login for full articles.</div>
+
+</div>
+</body>
+</html>
